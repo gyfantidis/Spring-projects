@@ -1,15 +1,13 @@
 package net.yfantidis.springproject1.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.ManyToAny;
 
 @Entity // Σχετίζεται με Βάση Δεδομένων
 @Table(name = "articles") // Το όνομα του πίνακα θα είναι "articles", default θα ήταν Article
 public class Article {
 
+    @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
     private String id;
@@ -18,7 +16,7 @@ public class Article {
     private String content;
 
     //Συσχέτηση άρθρου με συντάκτη Article with Author
-    @ManyToAny
+    @ManyToOne
     private Author author;
 
     public String getId() {
