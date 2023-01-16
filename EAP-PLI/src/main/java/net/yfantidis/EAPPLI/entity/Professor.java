@@ -1,19 +1,24 @@
-package net.yfantidis.EAPPLI.Entity;
+package net.yfantidis.EAPPLI.entity;
 
 import jakarta.persistence.*;
 
+
 @Entity
-public class Coordinator {
+public class Professor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
 
     private String firstName;
     private String lastName;
 
     @OneToOne
     private Lesson lesson;
+
+    public Professor() {
+    }
 
     public Long getId() {
         return id;

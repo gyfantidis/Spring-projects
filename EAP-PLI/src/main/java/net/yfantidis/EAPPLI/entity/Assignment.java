@@ -1,4 +1,4 @@
-package net.yfantidis.EAPPLI.Entity;
+package net.yfantidis.EAPPLI.entity;
 
 import jakarta.persistence.*;
 
@@ -14,6 +14,9 @@ public class Assignment {
 
     @ManyToOne
     private Lesson lesson;
+
+    public Assignment() {
+    }
 
     public Long getId() {
         return id;

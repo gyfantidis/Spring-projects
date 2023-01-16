@@ -1,4 +1,4 @@
-package net.yfantidis.EAPPLI.Entity;
+package net.yfantidis.EAPPLI.entity;
 
 import jakarta.persistence.*;
 import java.util.Objects;
