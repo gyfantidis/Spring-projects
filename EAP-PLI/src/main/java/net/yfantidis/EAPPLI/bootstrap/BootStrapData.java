@@ -54,7 +54,7 @@ public class BootStrapData implements CommandLineRunner {
          //lessonRepository.save(pli10);
 
 
-        
+
 
         Professor Giorgos = new Professor("Giorgos", "Papadopoulos");
 
