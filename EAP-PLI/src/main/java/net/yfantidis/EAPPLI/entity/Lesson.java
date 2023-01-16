@@ -39,6 +39,14 @@ public class Lesson {
     public Lesson() {
     }
 
+    public Lesson(String name, String abbreviation, String year, int numberOfAssignments, boolean isElective) {
+        this.name = name;
+        this.abbreviation = abbreviation;
+        this.year = year;
+        this.numberOfAssignments = numberOfAssignments;
+        this.isElective = isElective;
+    }
+
     public Long getId() {
         return id;
     }
@@ -133,5 +141,23 @@ public class Lesson {
 
     public void setStudents(Set<Student> students) {
         this.students = students;
+    }
+
+    @Override
+    public String toString() {
+        return "Lesson{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", abbreviation='" + abbreviation + '\'' +
+                ", year='" + year + '\'' +
+                ", numberOfAssignments=" + numberOfAssignments +
+                ", isElective=" + isElective +
+                ", grade=" + grade +
+                ", examination=" + examination +
+                ", coordinator=" + coordinator +
+                ", professor=" + professor +
+                ", assignmentSet=" + assignmentSet +
+                ", students=" + students +
+                '}';
     }
 }

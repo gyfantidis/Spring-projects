@@ -20,6 +20,11 @@ public class Professor {
     public Professor() {
     }
 
+    public Professor(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     public Long getId() {
         return id;
     }
@@ -50,5 +55,15 @@ public class Professor {
 
     public void setLesson(Lesson lesson) {
         this.lesson = lesson;
+    }
+
+    @Override
+    public String toString() {
+        return "Professor{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", lesson=" + lesson +
+                '}';
     }
 }
