@@ -7,6 +7,7 @@ import java.util.Set;
 
 
 @Entity
+@Table(name = "admin_lesson")
 public class Lesson {
 
     @Id
@@ -15,11 +16,12 @@ public class Lesson {
 
     private String name;
     private String abbreviation;
-    private String year;
+    private String yearL;
     private int numberOfAssignments;
     private boolean isElective;
     private double grade;
-/*
+
+
     @OneToOne
     private Examination examination;
 
@@ -28,9 +30,11 @@ public class Lesson {
 
     @OneToOne
     private Professor professor;
-*/
+
     @OneToMany
-    private Set<Assignment> assignmentSet = new HashSet<>();
+    @JoinColumn(name = "lesson_id")
+    private Set<Assignment> assignment = new HashSet<>();
+
 
     @ManyToMany
     private Set<Student> students = new HashSet<>();
@@ -41,7 +45,7 @@ public class Lesson {
     public Lesson(String name, String abbreviation, String year, int numberOfAssignments, boolean isElective) {
         this.name = name;
         this.abbreviation = abbreviation;
-        this.year = year;
+        this.yearL = year;
         this.numberOfAssignments = numberOfAssignments;
         this.isElective = isElective;
     }
@@ -71,11 +75,11 @@ public class Lesson {
     }
 
     public String getYear() {
-        return year;
+        return yearL;
     }
 
     public void setYear(String year) {
-        this.year = year;
+        this.yearL = year;
     }
 
     public int getNumberOfAssignments() {
@@ -101,7 +105,7 @@ public class Lesson {
     public void setGrade(double grade) {
         this.grade = grade;
     }
-/*
+
     public Examination getExamination() {
         return examination;
     }
@@ -125,13 +129,13 @@ public class Lesson {
     public void setProfessor(Professor professor) {
         this.professor = professor;
     }
-*/
+
     public Set<Assignment> getAssignmentSet() {
-        return assignmentSet;
+        return assignment;
     }
 
     public void setAssignmentSet(Set<Assignment> assignmentSet) {
-        this.assignmentSet = assignmentSet;
+        this.assignment = assignmentSet;
     }
 
     public Set<Student> getStudents() {
@@ -143,21 +147,20 @@ public class Lesson {
     }
 
 
-
     @Override
     public String toString() {
         return "Lesson{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", abbreviation='" + abbreviation + '\'' +
-                ", year='" + year + '\'' +
+                ", year='" + yearL + '\'' +
                 ", numberOfAssignments=" + numberOfAssignments +
                 ", isElective=" + isElective +
                 ", grade=" + grade +
-  //              ", examination=" + examination +
-    //            ", coordinator=" + coordinator +
-      //          ", professor=" + professor +
-                ", assignmentSet=" + assignmentSet +
+                ", examination=" + examination +
+                ", coordinator=" + coordinator +
+                ", professor=" + professor +
+                ", assignmentSet=" + assignment +
                 ", students=" + students +
                 '}';
     }
