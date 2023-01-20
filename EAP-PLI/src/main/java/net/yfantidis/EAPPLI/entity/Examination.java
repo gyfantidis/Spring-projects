@@ -20,6 +20,8 @@ public class Examination {
     public Examination() {
     }
 
+
+
     public Examination(double grade, boolean isPass, Lesson lesson) {
         this.grade = grade;
         this.isPass = isPass;

@@ -64,12 +64,19 @@ public class BootStrapData implements CommandLineRunner {
         Assignment erg1Pli10 = new Assignment(1);
         assignmentRepository.save(erg1Pli10);
 
+        Examination pli10ex1 = new Examination();
+        examinationRepository.save(pli10ex1);
+        pli10ex1.setLesson(pli10);
+        pli10ex1.setGrade(4.1);
+        pli10ex1.setPass(false);
+
 
         System.out.println(Giannis.toString());
         System.out.println(pli10.toString());
         System.out.println(Giorgos.toString());
         System.out.println(Panos.toString());
         System.out.println(erg1Pli10.toString());
+        System.out.println(pli10ex1.toString());
 
 
 
