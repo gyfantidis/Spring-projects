@@ -1,6 +1,5 @@
 package net.yfantidis.EAPPLI.entity;
 
-
 import jakarta.persistence.*;
 
 import java.util.HashSet;
@@ -142,6 +141,8 @@ public class Lesson {
     public void setStudents(Set<Student> students) {
         this.students = students;
     }
+
+
 
     @Override
     public String toString() {

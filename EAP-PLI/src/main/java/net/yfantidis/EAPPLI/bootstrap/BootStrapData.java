@@ -1,8 +1,6 @@
 package net.yfantidis.EAPPLI.bootstrap;
 
-import net.yfantidis.EAPPLI.entity.Lesson;
-import net.yfantidis.EAPPLI.entity.Professor;
-import net.yfantidis.EAPPLI.entity.Student;
+import net.yfantidis.EAPPLI.entity.*;
 import net.yfantidis.EAPPLI.repositories.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -51,21 +49,27 @@ public class BootStrapData implements CommandLineRunner {
         Lesson pli10 = new Lesson("Introduction to Computer Science", "PLI 10", "1", 4, false);
 
         Giannis.getLessons().add(pli10);
-         lessonRepository.save(pli10);
+        //lessonRepository.save(pli10);
 
 
 
 
         Professor Giorgos = new Professor("Giorgos", "Papadopoulos");
-
         pli10.setProfessor(Giorgos);
-
         professorRepository.save(Giorgos);
+
+        Coordinator Panos = new Coordinator("Panos", "Panagiotou");
+        coordinatorRepository.save(Panos);
+
+        Assignment erg1Pli10 = new Assignment(1);
+        assignmentRepository.save(erg1Pli10);
+
 
         System.out.println(Giannis.toString());
         System.out.println(pli10.toString());
         System.out.println(Giorgos.toString());
-
+        System.out.println(Panos.toString());
+        System.out.println(erg1Pli10.toString());
 
 
 

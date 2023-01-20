@@ -18,6 +18,11 @@ public class Coordinator {
     public Coordinator() {
     }
 
+    public Coordinator(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     public Long getId() {
         return id;
     }
@@ -48,5 +53,15 @@ public class Coordinator {
 
     public void setLesson(Lesson lesson) {
         this.lesson = lesson;
+    }
+
+    @Override
+    public String toString() {
+        return "Coordinator{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", lesson=" + lesson +
+                '}';
     }
 }

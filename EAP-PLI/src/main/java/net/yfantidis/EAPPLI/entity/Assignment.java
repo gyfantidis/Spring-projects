@@ -18,6 +18,10 @@ public class Assignment {
     public Assignment() {
     }
 
+    public Assignment(int assignmentsSeries) {
+        this.assignmentsSeries = assignmentsSeries;
+    }
+
     public Long getId() {
         return id;
     }
@@ -48,5 +52,15 @@ public class Assignment {
 
     public void setLesson(Lesson lesson) {
         this.lesson = lesson;
+    }
+
+    @Override
+    public String toString() {
+        return "Assignment{" +
+                "id=" + id +
+                ", assignmentsSeries=" + assignmentsSeries +
+                ", grade=" + grade +
+                ", lesson=" + lesson +
+                '}';
     }
 }
