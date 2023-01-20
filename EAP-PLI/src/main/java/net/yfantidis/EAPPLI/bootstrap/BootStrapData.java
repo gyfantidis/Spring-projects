@@ -51,7 +51,7 @@ public class BootStrapData implements CommandLineRunner {
         Lesson pli10 = new Lesson("Introduction to Computer Science", "PLI 10", "1", 4, false);
 
         Giannis.getLessons().add(pli10);
-         //lessonRepository.save(pli10);
+         lessonRepository.save(pli10);
 
 
 
