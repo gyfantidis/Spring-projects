@@ -49,13 +49,13 @@ public class BootStrapData implements CommandLineRunner {
         Lesson pli10 = new Lesson("Introduction to Computer Science", "PLI 10", "1", 4, false);
 
         Giannis.getLessons().add(pli10);
-        //lessonRepository.save(pli10);
+        lessonRepository.save(pli10);
 
 
 
 
         Professor Giorgos = new Professor("Giorgos", "Papadopoulos");
-        pli10.setProfessor(Giorgos);
+       // pli10.setProfessor(Giorgos);
         professorRepository.save(Giorgos);
 
         Coordinator Panos = new Coordinator("Panos", "Panagiotou");

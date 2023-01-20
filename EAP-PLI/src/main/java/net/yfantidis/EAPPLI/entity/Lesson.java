@@ -19,7 +19,7 @@ public class Lesson {
     private int numberOfAssignments;
     private boolean isElective;
     private double grade;
-
+/*
     @OneToOne
     private Examination examination;
 
@@ -28,7 +28,7 @@ public class Lesson {
 
     @OneToOne
     private Professor professor;
-
+*/
     @OneToMany
     private Set<Assignment> assignmentSet = new HashSet<>();
 
@@ -101,7 +101,7 @@ public class Lesson {
     public void setGrade(double grade) {
         this.grade = grade;
     }
-
+/*
     public Examination getExamination() {
         return examination;
     }
@@ -125,7 +125,7 @@ public class Lesson {
     public void setProfessor(Professor professor) {
         this.professor = professor;
     }
-
+*/
     public Set<Assignment> getAssignmentSet() {
         return assignmentSet;
     }
@@ -154,9 +154,9 @@ public class Lesson {
                 ", numberOfAssignments=" + numberOfAssignments +
                 ", isElective=" + isElective +
                 ", grade=" + grade +
-                ", examination=" + examination +
-                ", coordinator=" + coordinator +
-                ", professor=" + professor +
+  //              ", examination=" + examination +
+    //            ", coordinator=" + coordinator +
+      //          ", professor=" + professor +
                 ", assignmentSet=" + assignmentSet +
                 ", students=" + students +
                 '}';
