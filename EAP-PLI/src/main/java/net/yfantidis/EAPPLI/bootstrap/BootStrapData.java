@@ -45,33 +45,51 @@ public class BootStrapData implements CommandLineRunner {
         studentRepository.save(Petros);
 
 
+
+
+
         System.out.println("Students count:" + studentRepository.count());
         System.out.println("Student1 :" +Giannis.getLastName());
 
 
         Lesson pli10 = new Lesson("Introduction to Computer Science", "PLI 10", "1", 4, false);
         Lesson pli11 = new Lesson();
-        Giannis.getLessons().add(pli10);
+
+
         lessonRepository.save(pli10);
+        Giannis.getLessons().add(pli10);
+        studentRepository.save(Giannis);
+
+
 
 
 
 
         Professor Giorgos = new Professor("Giorgos", "Papadopoulos");
-        pli10.setProfessor(Giorgos);
-        professorRepository.save(Giorgos);
+        //pli10.setProfessor(Giorgos);
+
+
 
         Coordinator Panos = new Coordinator("Panos", "Panagiotou");
-        coordinatorRepository.save(Panos);
+
 
         Assignment erg1Pli10 = new Assignment(1);
-        assignmentRepository.save(erg1Pli10);
+
 
         Examination pli10ex1 = new Examination();
-        examinationRepository.save(pli10ex1);
+
         pli10ex1.setLesson(pli10);
         pli10ex1.setGrade(4.1);
         pli10ex1.setPass(false);
+
+        pli10.getAssignment().add(erg1Pli10);
+        //lessonRepository.save(pli10);
+
+
+        professorRepository.save(Giorgos);
+        coordinatorRepository.save(Panos);
+        assignmentRepository.save(erg1Pli10);
+        examinationRepository.save(pli10ex1);
 
 
         System.out.println(Giannis);

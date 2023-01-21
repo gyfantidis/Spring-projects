@@ -7,7 +7,7 @@ import java.util.Set;
 
 
 @Entity
-@Table(name = "admin_lesson")
+@Table(name = "lesson")
 public class Lesson {
 
     @Id
@@ -130,11 +130,11 @@ public class Lesson {
         this.professor = professor;
     }
 
-    public Set<Assignment> getAssignmentSet() {
+    public Set<Assignment> getAssignment() {
         return assignment;
     }
 
-    public void setAssignmentSet(Set<Assignment> assignmentSet) {
+    public void setAssignment(Set<Assignment> assignmentSet) {
         this.assignment = assignmentSet;
     }
 
