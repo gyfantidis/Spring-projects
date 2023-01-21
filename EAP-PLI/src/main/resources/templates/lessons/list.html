@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Lessons</title>
+</head>
+<body>
+<h1>lessons List</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Abbreviation</th>
+        <th>Name</th>
+    </tr>
+    <tr th:each="lesson : ${lessons}">
+        <td th:text="${lesson.id}"></td>
+        <td th:text="${lesson.abbreviation}"> </td>
+        <td th:text="${lesson.name}"> </td>
+    </tr>
+</table>
+
+</body>
+</html>

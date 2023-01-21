@@ -36,7 +36,7 @@ public class Lesson {
     private Set<Assignment> assignment = new HashSet<>();
 
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "lessons")
     private Set<Student> students = new HashSet<>();
 
     public Lesson() {

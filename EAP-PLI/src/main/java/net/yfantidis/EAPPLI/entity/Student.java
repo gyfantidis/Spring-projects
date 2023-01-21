@@ -21,6 +21,8 @@ public class Student {
     private String phoneNumber;
 
     @ManyToMany
+    @JoinTable(name="student___lesson", joinColumns = @JoinColumn(name="student_id_"),
+            inverseJoinColumns = @JoinColumn(name="lesson_id_"))
     private Set<Lesson> lessons= new HashSet<>();
 
     public Student() {

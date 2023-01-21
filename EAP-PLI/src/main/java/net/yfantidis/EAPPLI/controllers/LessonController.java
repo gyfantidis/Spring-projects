@@ -15,7 +15,7 @@ public class LessonController {
     }
 
     @RequestMapping("/lessons")
-    public String getAuthors(Model model){
+    public String getLessons(Model model){
 
         model.addAttribute("lessons", lessonRepository.findAll());
 
